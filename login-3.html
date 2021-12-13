@@ -288,7 +288,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput1">Image Code </label>
-                                                <input type="text" class="form-control" value="12345" readonly>
+                                                <input type="text" class="form-control" value="12345" disabled>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -463,6 +463,19 @@ $(window).click(function() {
 
         
     </script>
+    <script type="text/javascript">
+
+      function placeFooter() {
+        if( $(document.body).height() < $(window).height() ) {
+          $(".footer").css({position: "absolute", bottom:"0px"});
+        } else {
+          $(".footer").css({position: ""});
+        }
+      }
+      
+      placeFooter();
+      
+      </script>
 
 
     
