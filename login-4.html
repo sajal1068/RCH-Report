@@ -3,10 +3,19 @@
   <head>    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/exacti/floating-labels@latest/floating-labels.min.css">
+    
     <style>
+
+     .bg-gredient{
+        height: calc(100vh - 90px);
+        background-repeat: no-repeat;
+     }
+
+
+
         .add.form-group>label {
             top: 14px;
             left: 10px;
@@ -103,7 +112,7 @@
     </style>
     <title></title>
   </head>
-  <body class="">
+  <body class="bg-gredient">
     
     <section>
       <div id="loader-section">
@@ -112,7 +121,7 @@
     </section>
 
     <div class="wapper"><!-- wapper class start -->
-
+<section class="w-100 bg-white">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -124,9 +133,10 @@
                 </div>
             </div>
         </div>
+      </section>
 
 
-        <section class="login-box-2 bg-gredient w-100">
+        <section class="login-box-2  w-100">
             <div class="container">
                 <div class="row justify-content-center align-items-center">
 
@@ -261,7 +271,7 @@
       
 
         
-        <section class="footer ">
+        <section class="footer">
           <div class="container">
 
             <div class="row py-2 d-flex justify-content-center align-items-center">
@@ -399,6 +409,19 @@ $(window).click(function() {
 
         
     </script>
+    <script type="text/javascript">
+
+      function placeFooter() {
+        if( $(document.body).height() < $(window).height() ) {
+          $(".footer").css({position: "absolute", bottom:"0px"});
+        } else {
+          $(".footer").css({position: ""});
+        }
+      }
+      
+      placeFooter();
+      
+      </script>
 
 
     
