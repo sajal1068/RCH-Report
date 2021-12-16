@@ -910,9 +910,7 @@ ul.cooment-section li{
     display: flex;
     height: 100%;
 }
-.login-box-section .left-box{
-    
-}
+
 .login-box-section .left-box ,.login-box-section .right-box{
     width: 50%;
     float: left;
