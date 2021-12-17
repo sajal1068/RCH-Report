@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+  <head>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    
+    <style>
+
+     .bg-gredient{
+        height: calc(100vh - 90px);
+        background-repeat: no-repeat;
+     }
+    
+        .add.form-group>label {
+            top: 14px;
+            left: 10px;
+            position: relative;
+            background-color: white;
+            padding: 0px 5px 0px 5px;
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+        .noadd.form-group>label {
+            top: 36px;
+            left: 10px;
+            position: relative;
+            background-color: white;
+            padding: 0px 5px 0px 5px;
+            font-size: 0.9rem;
+            transition: 0.2s;
+            pointer-events:none;
+            font-weight: 400;
+        }
+        .noadd.form-group.label-animate>label {
+            top: 14px !important;
+            left: 10px !important;
+            font-size: 0.9em;
+        }
+
+        .login-box-2{            
+          width: 100%;
+          display: flex;
+          height: calc(100vh - 190px);
+          align-items: center;
+          background-image: linear-gradient(to right bottom, #1a2bac, #3a4fbf, #5a72ce, #7c94db, #a2b6e6, #adb8e6, #b8bae6, #c1bce6, #bf9ad2, #c474b1, #c74a83, #be124c);
+        } 
+        .bg-gredient{
+            background-image: linear-gradient(to right bottom, #1a2bac, #3a4fbf, #5a72ce, #7c94db, #a2b6e6, #adb8e6, #b8bae6, #c1bce6, #bf9ad2, #c474b1, #c74a83, #be124c);
+        }
+        .btn-login{
+            padding: 12px 32px;
+        }    
+
+        .middle-login-box{
+            
+            width: 100%;
+            border-radius: 4px;           
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+            position: relative;
+            margin:5% auto ;
+        }
+        .middle-login-box .icon{
+            position: absolute;
+            margin: auto;
+            left:0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #e9e9e9;
+            top:-75px;
+        }
+        .middle-login-box .icon img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;            
+        }
+        .middle-login-box .form-group{
+            margin-bottom: 0;
+        }
+        .form-control {
+            height: 45px;
+            padding: 10px 15px;
+        }
+        .login-form .form-control{
+            background: #ffffff;
+        }
+         .head{
+            position: relative;
+            width: 100%;
+            background:#01004C;
+            color:#fff;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-align: center;
+            
+        }
+        .head ul{
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          
+        }
+        .middle-login-box form{
+            padding: 5px 25px 10px;
+           
+     
+        }
+        .login-form{
+            padding: 0 15px;
+        }
+        .login-box-section .left-box{
+            background: rgba(0,0,0,0.12);
+            border-bottom-left-radius: 4px;
+            border-top-left-radius:4px ;
+            
+        }
+        .login-box-section .right-box {
+            padding: 15px 15px 15px;
+        }
+        .login-box-section{
+            max-width: 800px;
+            background: transparent;
+            border-radius: 4px;
+            margin: auto!important;
+        }
+        .login-box-section .right-box {
+            background: #ffffff;
+            /* background: rgba(255,255,255,0.2); */
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            -webkit-box-shadow: 0 10px 34px -15px rgb(0 0 0 / 24%);
+    -moz-box-shadow: 0 10px 34px -15px rgba(0,0,0,.24);
+    box-shadow: 0 10px 34px -15px rgb(0 0 0 / 24%); 
+        }
+        .login-box-section .right-box .form-group{
+            margin-bottom: 1px; 
+            position: relative;          
+        }
+        .invalid-feedback {           
+            margin-top: 0;           
+            position: absolute;
+        }
+
+        .the-fieldset {           
+            padding: 0px 10px 10px;           
+        }
+        .the-legend {
+            margin-bottom: -5px;
+        }
+        .login-box-section{
+            box-shadow: none;;
+        }
+        .login-box-section .left-box{
+            background: none;
+            background-image: none;
+        }
+        @media (max-width: 575.98px) { 
+          .login-box-2 {           
+            height: auto;
+            padding: 10px 0;
+            border-radius: 0;    
+          }
+          .login-box-section{
+            width: calc(100% - 20px);
+            flex-direction: column;
+           
+          }
+          .login-box-section .left-box {
+            width: 100%;
+            border-radius:0;
+           
+            order: 2;
+          }
+          .login-box-section .right-box {
+            width: 100%;
+            order: 1;
+            padding: 15px 15px;
+            border-radius:0;
+          }
+        }
+
+        
+        @media (min-width: 576px) and (max-width: 767.98px) { 
+          .login-box-2 {           
+            height: auto;
+            padding: 10px 0;
+            border-radius: 0;    
+          }
+          .login-box-section{
+            width: calc(100% - 20px);
+            flex-direction: column;
+           
+          }
+          .login-box-section .left-box {
+            width: 100%;
+            border-radius:0;
+           
+            order: 2;
+          }
+          .login-box-section .right-box {
+            width: 100%;
+            order: 1;
+            padding: 15px 15px;
+            border-radius:0;
+          }
+        }
+
+       
+        @media (min-width: 768px) and (max-width: 991.98px) {
+              .login-box-section .right-box {
+                padding: 15px 15px 15px;
+              }
+          }
+
+       
+        @media (min-width: 992px) and (max-width: 1199.98px) {  }
+
+        
+        @media (min-width: 1200px) {  }
+       
+    </style>
+    <title></title>
+  </head>
+  <body>
+    
+    <section>
+      <div id="loader-section">
+        <span class="loader-custom"> </span>
+      </div>      
+    </section>
+
+    <div class="wapper"><!-- wapper class start -->
+<section class="w-100 bg-white">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                  <ul class="img-box">
+                    <li><a href="#"><img src="assets/images/logo.png"class="img-fluid"></a></li>
+                    <li><a href="#"><img src="assets/images/01-nhm.png" class="img-fluid"></a></li>
+                    <li><a href="#"><img src="assets/images/digital-india.png" class="img-fluid"></a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+      </section>
+
+
+      <section class="login-box-2">
+        <div class="container">
+          <div class="row">
+
+             <div class="login-box-section">
+               <div class="left-box">
+                 <img src="assets/images/center-logo.png" class="img-fluid mx-auto d-block">
+               <div class="heading"> Ministry of Health and Family Welfare <span class="d-block"></span>
+             Government of India</div>
+               </div><!-- left-login class close -->
+
+               <!-- -->
+               <div class="right-box">
+                 <fieldset class="the-fieldset">
+                   <legend class="the-legend">Login</legend>
+                   <form id="signupForm" class="login-form" novalidate="novalidate">                   
+                    <div class="add form-group">  
+                        <label for="">State <span class="red">*</span></label>                                      
+                        <select name="ddlStateName" id="ddlStateName" class="form-control is-valid" aria-invalid="false">
+                            <option value="">-- Please select --</option>
+                            <option value="35">Andaman Nicobar-UT (35)</option>
+                            <option value="28">Andhra Pradesh (28)</option>
+                            <option value="12">Arunanchal Pradesh (12)</option>
+                            <option value="18">Assam (18)</option>
+                            <option value="10">Bihar (10)</option>
+                            <option value="4">Chandigarh-UT (4)</option>
+                            <option value="22">Chhattisgarh (22)</option>
+                            <option value="38">Dadra and Nagar Haveli and Daman and Diu (38)</option>
+                            <option value="7">Delhi (7)</option>
+                            <option selected="selected" value="30">Goa (30)</option>
+                            <option value="24">Gujarat (24)</option>
+                            <option value="6">Haryana (6)</option>
+                            <option value="2">Himachal Pradesh (2)</option>
+                            <option value="1">Jammu Kashmir (1)</option>
+                            <option value="20">Jharkhand (20)</option>
+                            <option value="29">Karnataka (29)</option>
+                            <option value="32">Kerala (32)</option>
+                            <option value="37">Ladakh (37)</option>
+                            <option value="31">Lakshadweep-UT (31)</option>
+                            <option value="23">Madhya Pradesh (23)</option>
+                            <option value="27">Maharashtra (27)</option>
+                            <option value="14">Manipur (14)</option>
+                            <option value="17">Meghalaya (17)</option>
+                            <option value="15">Mizoram (15)</option>
+                            <option value="13">Nagaland (13)</option>
+                            <option value="21">Odisha (21)</option>
+                            <option value="34">Puducherry-UT (34)</option>
+                            <option value="3">Punjab (3)</option>
+                            <option value="11">Sikkim (11)</option>
+                            <option value="36">Telangana (36)</option>
+                            <option value="95">Test-AP (95)</option>
+                            <option value="97">Test-Chandigarh (97)</option>
+                            <option value="98">Test-Goa (98)</option>
+                            <option value="94">Test-Haryana (94)</option>
+                            <option value="90">Test-Himachal Pradesh (90)</option>
+                            <option value="89">Test-Karnataka(89) (89)</option>
+                            <option value="87">Test-Madhya Pradesh (87)</option>
+                            <option value="92">Test-Maharashtra(27) (92)</option>
+                            <option value="91">Test-Odisha (91)</option>
+                            <option value="96">Test-Punjab (96)</option>
+                            <option value="88">Test-Telangana (88)</option>
+                            <option value="99">Test-Tripura (99)</option>
+                            <option value="93">Test-West Bengal (93)</option>
+                            <option value="16">Tripura (16)</option>
+                            <option value="9">Uttar Pradesh (9)</option>
+                            <option value="5">Uttarakhand (5)</option>
+                            <option value="19">West Bengal (19)</option>
+                            <option value="0">--Select-NA--</option>
+                        </select>
+                        
+                      </div>
+                    <div class="noadd form-group">
+                        <label for="exampleFormControlInput1">User Name <span class="red">*</span></label>
+                      <input type="text" class="form-control" name="txtUserName" id="txtUserName">
+                      
+                    </div>
+
+                    <div class="noadd form-group">
+                        <label for="exampleFormControlInput1">Password <span class="red">*</span></label>
+                        <input name="txtPassword" type="password" id="txtPassword" class="form-control">
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-6">
+                            <div class="add form-group">
+                                <label for="exampleFormControlInput1">Image Code </label>
+                                <input type="text" class="form-control" value="12345" disabled="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group noadd">
+                          <label for="exampleFormControlInput1">Enter Captcha <span class="red">*</span></label>
+                          <input name="txtimgcode" type="text" autocomplete="off" maxlength="5" id="txtimgcode" class="form-control">
+                        </div>
+                        </div>
+                      </div>                      
+
+                    <div class="form-group  mt-3">
+                        <button type="submit" name="btnLogin" id="btnLogin" class="btn-login">Login</button>
+                    </div>
+                    
+                    
+                  </form>
+                 </fieldset>
+               </div>
+               <!-- -->
+             </div>
+           
+          </div>
+        </div>
+     </section>
+
+
+    
+
+
+      
+
+        
+        <section class="footer">
+          <div class="container">
+
+            <div class="row py-2 d-flex justify-content-center align-items-center">
+                <div class="col-lg-4">
+                  <ul class="footer-links">  
+                    <li><a href="">Disclaimer</a></li> 
+                    <li><a href="">Related Links</a></li>
+                    <li><a href="">Linking Policy</a></li>
+                                  
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <p class="helpdesk"><strong>HELPDESK :</strong> helpdesk-mcts@lsmgr.nic.in</p>
+                </div>
+                <div class="col-lg-4">
+                  <ul class="footer-img">
+                    <li><img src="assets/images/national-portal-india.jpg" class="img-fluid"></li>
+                    <li><img src="assets/images/nic-logo.png" class="img-fluid"></li>
+                  </ul>  
+                </div>
+            </div>
+          </div>
+
+          <article class="copyright-section">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <p class="copyright">Site is designed and hosted by National Informatics Centre (NIC). Information is provided and updated by MoHFW</p>
+                </div>              
+              </div>
+            </div>
+          </article>
+           
+        </section>
+
+
+    </div>   <!-- wapper class close -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>    
+    <script src="assets/js/jquery.validate.min.js"></script>    
+    <script src="assets/js/additional-methods.min.js"></script>    
+
+
+    <script type="text/javascript">
+     
+      $.validator.setDefaults( {
+        submitHandler: function () {
+          alert( "submitted!" );
+        }
+      });
+  
+      $( document ).ready( function () {
+        $( "#signupForm" ).validate( {
+          rules: {
+            ddlStateName:{
+                  required: {
+                      depends: function(element){
+                          if('none' == $('#ddlStateName').val()){
+                              //Set predefined value to blank.
+                              $('#ddlStateName').val('');
+                          }
+                          return true;
+                      }
+                  }
+              },           
+              txtUserName: {
+              required: true,
+              minlength: 1
+              },
+              txtPassword: {
+                required: true,
+                minlength: 1
+              },
+              txtimgcode: {
+                required: true,
+                minlength: 5
+              }             
+              
+          },
+         
+          messages: {
+            ddlStateName: "Please select state",           
+            txtUserName: {
+              required: "Please enter a username",
+              minlength: "Your username must consist of at least 1 characters"
+            },
+            txtPassword: {
+              required: "Please enter a password",
+              minlength: "Your password must be at least 1 characters long"
+            },
+            txtimgcode: {
+              required: "Please enter a image code",
+              minlength: "Your image code must be at least 5 characters long"             
+            }
+          },
+          errorElement: "em",
+          errorPlacement: function ( error, element ) {
+            // Add the `invalid-feedback` class to the error element
+            error.addClass( "invalid-feedback" );
+  
+            if ( element.prop( "type" ) === "checkbox" ) {
+              error.insertAfter( element.next( "label" ) );
+            } else {
+              error.insertAfter( element );
+            }
+          },
+          highlight: function ( element, errorClass, validClass ) {
+            $( element ).addClass( "is-invalid" ).removeClass( "is-valid" );
+          },
+          unhighlight: function (element, errorClass, validClass) {
+            $( element ).addClass( "is-valid" ).removeClass( "is-invalid" );
+          }
+        });
+  
+      } );
+
+      $(document).ready(function() {
+
+$(".noadd .form-control").click(function() {
+  $(this).parent().addClass("label-animate");
+});
+
+$(window).click(function() {
+  if (!$(event.target).is('.noadd .form-control')) {
+    $(".noadd .form-control").each(function() {
+      if ($(this).val() == '') {
+        $(this).parent().removeClass("label-animate");
+      }
+    });
+  }
+});
+});
+
+
+        
+    </script>
+    <script type="text/javascript">
+      $( document ).ready(function() {
+          console.log( "ready!" );
+          function placeFooter() {
+              if( $(document.body).height() < $(window).height() ) {
+                $(".footer").css({position: "absolute", bottom:"0px"});
+              } else {
+                $(".footer").css({position: ""});
+              }
+            }
+            
+            placeFooter();
+      });  
+      </script>
+
+
+    
+  </body>
+</html>
