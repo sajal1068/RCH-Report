@@ -138,7 +138,7 @@ body{
 ul.img-box{
     width:100%;
     margin:0 auto;    
-    padding: 10px 15px;
+    padding: 5px 0px;
     list-style: none;
     display:inline-block;   
 }
