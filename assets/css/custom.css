@@ -146,7 +146,7 @@ ul.img-box li{
     display:inline-block;
 }
 ul.img-box li:nth-child(1) img{
-    height:70px;    
+    /* height:70px;     */
 }
 ul.img-box li:nth-child(2) ,ul.img-box li:nth-child(3){
     float: right;
@@ -1074,7 +1074,7 @@ ul.cooment-section li{
         margin-bottom: 10px;   
     }
     ul.img-box li:nth-child(1) img{
-        /* height:70px;     */
+        height:70px;    
     }
     ul.img-box li:nth-child(2) ,ul.img-box li:nth-child(3){
         width:49.91%;
